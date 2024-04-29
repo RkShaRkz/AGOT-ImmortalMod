@@ -409,9 +409,9 @@ change_immortality_supplement = {
 	}
 	if = {
 		limit = {
-			has_trait = immortal_gifted
+			has_trait = immortality_gifted
 		}
-		if = {limit = {has_trait = immortal_gifted} remove_trait = immortal_gifted}
+		if = {limit = {has_trait = immortality_gifted} remove_trait = immortality_gifted}
 	}
 	if = {
 		limit = {
@@ -446,9 +446,9 @@ change_immortality_genetic_supplement = {
 	}
 	if = {
 		limit = {
-			has_trait = immortal_gifted
+			has_trait = immortality_gifted
 		}
-		if = {limit = {has_trait = immortal_gifted} remove_trait = immortal_gifted}
+		if = {limit = {has_trait = immortality_gifted} remove_trait = immortality_gifted}
 	}
 	if = {
 		limit = {
@@ -483,9 +483,9 @@ change_immortality_sterile_supplement = {
 	}
 	if = {
 		limit = {
-			has_trait = immortal_gifted
+			has_trait = immortality_gifted
 		}
-		if = {limit = {has_trait = immortal_gifted} remove_trait = immortal_gifted}
+		if = {limit = {has_trait = immortality_gifted} remove_trait = immortality_gifted}
 	}
 	if = {
 		limit = {
@@ -522,9 +522,9 @@ remove_immortality = {
 	}
 	if = {
 		limit = {
-			has_trait = immortal_gifted
+			has_trait = immortality_gifted
 		}
-		if = {limit = {has_trait = immortal_gifted} remove_trait = immortal_gifted}
+		if = {limit = {has_trait = immortality_gifted} remove_trait = immortality_gifted}
 	}
 	if = {
 		limit = {
@@ -538,23 +538,7 @@ remove_immortality = {
 		}
 		remove_character_flag = immune_to_disease
 	}
-	#restore old age prowess penalty
-	if = {
-		limit = {
-			NOT = { 
-				has_character_modifier = {
-					modifier = "age_prowess_loss"
-				}
-			}
-		}
-		add_character_modifier = {
-			modifier = "age_prowess_loss"
-			duration = -1  # Permanent duration (-1 means indefinite)
-			# You can optionally specify other parameters here, such as:
-			# date = { day = 1 month = january year = 1066 }  # Start date for the modifier
-			# random = 50  # Randomization factor for duration (optional)
-		}
-	}
+
 	remove_variable = immortal_age
 }
 
